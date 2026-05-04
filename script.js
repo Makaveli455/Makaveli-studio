@@ -26,3 +26,40 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
     alert("Coś poszło nie tak. Spróbuj ponownie.");
   });
 });
+
+tsParticles.load("tsparticles", {
+  background: {
+    color: "#050505"
+  },
+  particles: {
+    number: {
+      value: 60
+    },
+    color: {
+      value: "#d4af37"   // złoty minimal (premium gold)
+    },
+    links: {
+      enable: true,
+      color: "#d4af37",
+      opacity: 0.15
+    },
+    move: {
+      enable: true,
+      speed: 0.6
+    },
+    size: {
+      value: 2
+    },
+    opacity: {
+      value: 0.4
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "repulse"
+      }
+    }
+  }
+});
