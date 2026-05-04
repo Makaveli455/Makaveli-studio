@@ -58,7 +58,7 @@ html{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:140px 20px 100px;
+  padding:120px 20px 80px;
 }
 
 h1{
@@ -74,9 +74,9 @@ p{
   max-width:600px;
 }
 
-/* GLOBAL SECTIONS */
+/* SEKCJE — MNIEJSZE I STABILNE ODSTĘPY */
 section{
-  padding:110px 20px;
+  padding:80px 20px; /* 🔥 zmniejszone */
 }
 
 /* OFERTA GRID */
@@ -88,17 +88,21 @@ section{
   margin:auto;
 }
 
-/* CARDS */
+/* KARTY */
 .card{
   background:#111;
   padding:25px;
   border-radius:15px;
-  transition:0.3s;
+  transition:0.25s ease;
+  will-change: transform;
 }
 
+/* 🔥 FIX NA „WCHODZENIE” NA INNE SEKCJE */
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   box-shadow:0 0 0 1px gold;
+  position:relative;
+  z-index:2;
 }
 
 /* PRICE */
@@ -107,42 +111,44 @@ section{
   font-weight:900;
 }
 
-/* TARGET SECTION (FIX NA NACHODZENIE) */
+/* TARGET SECTION */
 .target{
   max-width:1100px;
-  margin:120px auto 0; /* 🔥 KLUCZOWA POPRAWKA */
+  margin:60px auto 0; /* 🔥 mniejszy odstęp */
 }
 
 .target h2{
   font-size:36px;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 .subtitle{
   display:block;
   color:#aaa;
-  margin-bottom:50px;
+  margin-bottom:35px;
 }
 
 /* TARGET GRID */
 .target-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-  margin-top:20px;
+  gap:18px;
+  margin-top:10px;
 }
 
-/* TARGET CARDS */
+/* TARGET CARD */
 .target-card{
   background:#111;
   padding:25px;
   border-radius:15px;
-  transition:0.3s;
+  transition:0.25s ease;
 }
 
 .target-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
   box-shadow:0 0 0 1px gold;
+  position:relative;
+  z-index:2;
 }
 
 .target-card h3{
@@ -206,14 +212,4 @@ section{
   color:#aaa;
   margin-top:10px;
   cursor:pointer;
-}
-
-/* PARTICLES */
-#tsparticles{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
 }
