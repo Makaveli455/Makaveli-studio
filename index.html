@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Makaveli Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("xtbGEwTc9Ko4Pw7tW");
+  })();
+</script>
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">MAKAVELI</div>
+  <a href="#oferta">Oferta</a>
+  <a href="#kontakt">Kontakt</a>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>STRONY, KTÓRE <span>SPRZEDAJĄ</span></h1>
+  <p>Nowoczesne strony internetowe dla firm.</p>
+
+  <a href="#oferta" class="btn">Zacznij teraz</a>
+  <a href="#kontakt" class="btn ghost">Darmowa wycena</a>
+</section>
+
+<section id="oferta" class="section">
+  <h2>Oferta</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Wizytówka</h3>
+      <div class="price">100 zł</div>
+      <p>Prosta strona.</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>Premium</h3>
+      <div class="price">250 zł</div>
+      <p>Strona nastawiona na klientów.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="target">
+  <h2>Dla kogo jest ta oferta?</h2>
+  <p2 class="subtitle">Nie tylko dla firm – tworzę strony dla każdego, kto chce wyglądać profesjonalnie w internecie</p2>
+
+  <div class="target-grid">
+
+    <div class="target-card">
+      <h3>Małe firmy</h3>
+      <p2>Fryzjerzy, mechanicy, barberzy, restauracje – strona, która przyciąga klientów.</p2>
+    </div>
+
+    <div class="target-card">
+      <h3>Osoby prywatne</h3>
+      <p2>Portfolio, CV online, własna marka osobista – pokaż się profesjonalnie.</p2>
+    </div>
+
+    <div class="target-card">
+      <h3>Usługi lokalne</h3>
+      <p2>Hydraulik, elektryk, trener – więcej klientów dzięki nowoczesnej stronie.</p2>
+    </div>
+
+    <div class="target-card">
+      <h3>Social media</h3>
+      <p2>Link w bio, strona pod Instagram/TikTok – wszystko w jednym miejscu.</p2>
+    </div>
+
+    <div class="target-card">
+      <h3>Start-upy</h3>
+      <p2>Szybki start projektu bez wydawania tysięcy na agencję.</p2>
+    </div>
+
+    <div class="target-card">
+      <h3>Każdy, kto chce wyglądać premium</h3>
+      <p2>Twoja strona = pierwsze wrażenie. Zrób je dobrze.</p2>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Skontaktuj się i otrzymaj darmową wycenę w 24h</h2>
+
+  <button class="btn" onclick="openForm()">Napisz wiadomość</button>
+</section>
+
+<section id="kontakt" class="section">
+  <h2>Kontakt</h2>
+  <p2>📞 +48 533 391 170</p2>
+  <p2>✉️ makaveli455@gmail.com</p2>
+
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="form">
+    <h3>Kontakt</h3>
+
+    <form id="contactForm">
+	<input name="name" placeholder="Imię" required>
+	<input name="email" placeholder="Email" required>
+	<textarea name="message" placeholder="Wiadomość" required></textarea>
+
+      <button type="submit" class="btn">Wyślij</button>
+    </form>
+
+    <button onclick="closeForm()" class="close">Zamknij</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
