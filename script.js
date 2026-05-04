@@ -6,8 +6,7 @@ function closeForm(){
   document.getElementById('modal').style.display='none';
 }
 
-// EMAILJS SEND (AKTYWNY SYSTEM)
-
+/* EMAILJS */
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
 
@@ -17,49 +16,44 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
     this
   )
   .then(() => {
-    alert("Wiadomość wysłana poprawnie!");
+    alert("Wiadomość wysłana!");
     closeForm();
     this.reset();
   })
   .catch((error) => {
-    console.log("Błąd:", error);
-    alert("Coś poszło nie tak. Spróbuj ponownie.");
+    console.log(error);
+    alert("Błąd wysyłki");
   });
 });
 
-tsParticles.load("tsparticles", {
-  background: {
-    color: "#050505"
-  },
-  particles: {
-    number: {
-      value: 60
+/* PARTICLES FIXED */
+window.addEventListener("load", function () {
+  tsParticles.load("tsparticles", {
+    background: {
+      color: "#050505"
     },
-    color: {
-      value: "#d4af37"   // złoty minimal (premium gold)
-    },
-    links: {
-      enable: true,
-      color: "#d4af37",
-      opacity: 0.15
-    },
-    move: {
-      enable: true,
-      speed: 0.6
-    },
-    size: {
-      value: 2
-    },
-    opacity: {
-      value: 0.4
-    }
-  },
-  interactivity: {
-    events: {
-      onHover: {
+    particles: {
+      number: { value: 55 },
+      color: { value: "#d4af37" },
+      links: {
         enable: true,
-        mode: "repulse"
+        color: "#d4af37",
+        opacity: 0.15
+      },
+      move: {
+        enable: true,
+        speed: 0.5
+      },
+      size: { value: 2 },
+      opacity: { value: 0.4 }
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse"
+        }
       }
     }
-  }
+  });
 });
