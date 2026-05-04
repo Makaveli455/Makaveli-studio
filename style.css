@@ -236,3 +236,17 @@ section{
   margin-top:10px;
   cursor:pointer;
 }
+
+@media (max-width: 768px){
+
+  h1{
+    font-size:38px;
+    line-height:1.2;
+    padding:0 10px;
+    word-break:break-word;
+  }
+
+  .hero{
+    padding:120px 15px 80px;
+  }
+}
